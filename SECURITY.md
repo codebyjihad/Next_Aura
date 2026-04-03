@@ -1,21 +1,40 @@
 # Security Policy
 
+Next-Aura takes security seriously. This document explains how to report security issues.
+
+---
+
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We actively maintain security for the latest version of Next-Aura.  
+If you are using an older version, please upgrade to the latest release.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+---
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security issue in Next-Aura:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. Do **not** create a public issue on GitHub.  
+2. Contact us privately via:  
+   - Email: **codebyjihad@gmail.com** (replace with your real email)  
+   - Discord: [Join our server](https://discord.gg/a9KZ6cWvR)  
+3. Include details about the vulnerability:
+   - Steps to reproduce  
+   - Screenshots or code examples if available  
+   - Severity of the issue  
+
+We will respond as soon as possible and work with you to fix it responsibly.
+
+---
+
+## Security Updates
+
+Security fixes will be released as new versions on GitHub.  
+Please update your installation regularly to stay safe.
+
+---
+
+## Acknowledgements
+
+We appreciate everyone who reports security issues responsibly.
