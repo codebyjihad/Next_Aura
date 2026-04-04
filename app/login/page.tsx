@@ -47,7 +47,6 @@ const LogPages = () => {
             <p className="py-3 flex items-center text-sm text-gray-800 before:flex-1 before:border-t before:border-gray-400 before:me-6 after:flex-1 after:border-t after:border-gray-400 after:ms-6">Or Login with</p>
             <div className="flex gap-2">
               <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">Google</button>
-              <button className="text-gray-800 bg-gray-100 hover:bg-gray-300 transition-all duration-300 px-4 py-2 rounded-lg font-bold w-full cursor-pointer border border-gray-300">Apple</button>
             </div>
           </div>
       </div>
