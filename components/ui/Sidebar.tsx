@@ -8,6 +8,7 @@ import {
     FaBell,
     FaCog,
     FaMoon,
+    FaSun,
     FaUserCircle,
 } from "react-icons/fa";
 import { Button } from "./button";
@@ -24,14 +25,14 @@ const menuItems: MenuItem[] = [
     { name: "Home", icon: <FaHome />, url: "/" },
     { name: "Reels", icon: <FaVideo />, url: "/reels" },
     { name: "Create", icon: <FaPlusCircle />, url: "/create" },
-    { name: "Messages", icon: <FaEnvelope />, url: "/messages" },
     { name: "Notifications", icon: <FaBell />, url: "/notifications" },
+     { name: "Messages", icon: <FaEnvelope />, url: "/messages" },
 ];
 
 const Sidebar = () => {
 
     const [user, setUser] = useState<boolean>(false)
-    const {toggleDarkMode} = useProvider()
+    const {toggleDarkMode ,theme } = useProvider()
 
 
     return (
@@ -60,8 +61,14 @@ const Sidebar = () => {
             <div className="p-6 border-t border-border">
                 {/* Dark Mode Button (UI only) */}
                 <button onClick={toggleDarkMode} className="flex items-center mb-4 px-4 py-2  rounded-2xl bg-secondary  cursor-pointer hover:bg-secondary/70 transition-colors w-full">
-                    <FaMoon className="mr-2" />
-                    <span>Dark Mode</span>
+                    {
+                        theme === 'dark' ? <div className="flex items-center gap-2">
+                         <FaSun/>
+                         <span>Light Mode</span></div>: <div className="flex items-center gap-2">
+                          <FaMoon className="mr-2" />
+                          <span>Dark Mode</span>
+                    </div>
+                    }
                 </button>
 
                 {
