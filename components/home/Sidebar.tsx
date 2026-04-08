@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
 
 const Sidebar = () => {
 
-    const [user, setUser] = useState<boolean>(false)
+    const [user, setUser] = useState<boolean>(true)
     const {toggleDarkMode ,theme } = useProvider()
 
 
@@ -59,26 +59,14 @@ const Sidebar = () => {
             </div>
 
             <div className="p-6 border-t border-border">
-                {/* Dark Mode Button (UI only) */}
-                <button onClick={toggleDarkMode} className="flex items-center mb-4 px-4 py-2  rounded-2xl bg-secondary  cursor-pointer hover:bg-secondary/70 transition-colors w-full">
-                    {
-                        theme === 'dark' ? <div className="flex items-center gap-2">
-                         <FaSun/>
-                         <span>Light Mode</span></div>: <div className="flex items-center gap-2">
-                          <FaMoon className="mr-2" />
-                          <span>Dark Mode</span>
-                    </div>
-                    }
-                </button>
-
-                {
+                   {
                     user ?
                         <div className="flex items-center px-4 py-2 rounded cursor-pointer hover:bg-secondary transition-colors">
                             <FaUserCircle className="text-2xl mr-3" />
-                            <div>
+                            <div className="flex items-center gap-2"> 
                                 <div className="text-sm text-gray-500">View Profile</div>
+                                <Link href='/profile'> <FaCog className="ml-auto" /></Link>
                             </div>
-                            <FaCog className="ml-auto" />
                         </div>
                         : <Link href='/login' className="w-full">
                              <Button className="w-full">Login</Button>
