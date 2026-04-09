@@ -31,7 +31,7 @@ const menuItems: MenuItem[] = [
 
 const Sidebar = () => {
 
-    const [user, setUser] = useState<boolean>(false)
+    const [user, setUser] = useState<boolean>(true)
     const {toggleDarkMode ,theme } = useProvider()
 
 
