@@ -3,6 +3,9 @@ import Link from 'next/link';
 import React from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 import { IoIosArrowRoundBack } from "react-icons/io";
+import { ProfileData } from './pfSidebar';
+import { CiLogout } from "react-icons/ci";
+
 
 
 const ProfileSidebar = () => {
@@ -15,6 +18,20 @@ const ProfileSidebar = () => {
               <FaUserCircle className="text-5xl mr-3"/>
               <span className='text-xl font-bold text-foreground'>User Name ?</span>
          </div>
+         {/* Sidebar mapping */}
+         <div className='flex flex-col gap-5 mt-5'> 
+              {
+                  ProfileData.map((items) => (
+                    <div key={items.id} className='flex items-center gap-3 text-md'>
+                          <span><items.icone/></span>
+                         <Link href={items.href}>{items.name}</Link>
+                    </div>
+                  ))
+              }
+         </div>
+        </div>
+        <div className='p-4 border-t'>
+          <Link className='flex items-center gap-2 text-xl bg-destructive/20  justify-center rounded-2xl' href='/'><CiLogout/>Logout</Link>
         </div>
     </div>
   )
