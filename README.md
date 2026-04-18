@@ -1,84 +1,110 @@
-## Next-Aura
+# StudyHub – Problem Solving Community Platform
 
-Next-Aura is an open-source social media application designed with a focus on learning, interaction, and content sharing.  
-It combines the power of social networking with structured learning features to create a unique and meaningful user experience.
+StudyHub is a community-based platform where users can post problems and others can help solve them. It supports multiple categories such as Programming, Mathematics, Physics, and General topics.
 
-The goal of this project is to build a platform where users can not only connect and share content but also learn in a structured and engaging way.
+## Overview
 
----
+The purpose of StudyHub is to create a simple and beginner-friendly environment where people can learn by asking questions and solving problems collaboratively.
 
 ## Features
 
-### Feed System
-- Users can create, update, and delete posts  
-- Users can like, comment, and share posts  
-- Real-time feed updates for better user experience  
-- Personalized feed based on user activity (future improvement ready)
-
----
-
-### Messaging System
-- One-to-one private chat between users  
-- Real-time messaging using Socket-based communication  
-- Clean and modern UI inspired by Discord  
-- Instant message delivery and updates  
-
----
-
-### Reel / Short Video System
-- Users can upload short videos (reels)  
-- Scrollable video feed similar to TikTok and Instagram  
-- Like, comment, and share reels  
-- Optimized video loading for smooth performance  
-
----
-
-### Learning Flow (Unique Feature)
-- Users can share educational and informative content  
-- Structured learning posts (like mini lessons or tutorials)  
-- Follow learning topics or specific creators  
-- Designed to combine social media with continuous learning  
-
----
-
 ### User System
-- Secure authentication using JWT  
-- User profile with bio, profile image, and activity history  
-- Follow and unfollow system  
-- Basic user authorization and role handling  
 
----
+* User registration and login
+* User profile with skills and activity
 
-## Project Vision
+### Problem Posting
 
-Next-Aura is not just another social media platform.  
-It aims to solve the problem of unproductive scrolling by introducing a learning-focused content system.
+* Create a problem with title and description
+* Select category (Programming, Mathematics, etc.)
+* Add tags for better organization
 
-The platform encourages users to:
-- Learn while consuming content  
-- Share knowledge with others  
-- Build a community around growth and education  
+### Solution System
 
----
+* Users can submit solutions through comments
+* Support for code snippets for programming problems
+* Clear explanations for learning
+
+### Interaction
+
+* Like or upvote solutions
+* Mark a solution as the best answer
+
+### Search and Filter
+
+* Search problems by keywords
+* Filter by category and tags
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* Tailwind CSS
+
+### Backend
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+
+### Authentication
+
+* JSON Web Token (JWT)
+
+## How It Works
+
+1. A user creates an account
+2. The user posts a problem
+3. Other users can view the problem
+4. Users submit solutions through comments
+5. Solutions may include code or explanations
+6. The problem owner can mark the best solution
+
+## Database Structure (Simplified)
+
+### Users
+
+* name
+* email
+* password
+* skills
+
+### Posts
+
+* title
+* description
+* category
+* tags
+* userId
+
+### Comments (Solutions)
+
+* postId
+* userId
+* text
+* code
+* likes
+* isBest
 
 ## Future Improvements
 
-- Notification system (real-time alerts)  
-- Group chat and community channels  
-- AI-based content recommendation system  
-- Advanced search and filtering  
-- Mobile application (React Native or Flutter)  
-- Video monetization and creator support system  
+* Real-time notifications
+* Leaderboard for top contributors
+* Saved or favorite problems
+* Advanced search and filtering
 
----
+## Project Goal
 
-## Why This Project Matters
+This project is designed to improve problem-solving skills, encourage collaboration, and serve as a portfolio project for developers.
 
-This project demonstrates:
-- Full-stack development skills  
-- Real-time system design  
-- Scalable backend architecture  
-- Clean UI/UX thinking  
-- Problem-solving in real-world scenarios  
+## Author
 
-It is built as a portfolio-level project to showcase job-ready development skills.
+Your Name
+
+## License
+
+This project is open-source and available under the MIT License.
